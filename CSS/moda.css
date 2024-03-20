@@ -1,19 +1,31 @@
 h1{
+    width: 20000px;
+    height: 100px;
     background-color: blue;
 
-}
-h2{
+}h2{
+
+    width: 20000px;
+    height: 100px;
     background-color: brown;
 
-}
-h3{
+}h3{
+
+    width: 20000px;
+    height: 100px;
     background-color: chocolate;
 
-}
-h4{
+}h4{
 
     width: 20000px;
     height: 100px;
     background-size: 0;
     background-color: chartreuse;
+}
+
+button
+{
+color-scheme: black;
+
+
 }
