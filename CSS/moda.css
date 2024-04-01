@@ -29,3 +29,8 @@ color-scheme: black;
 
 
 }
+
+.carousel-inner img{
+    width: 10px;
+    
+}
