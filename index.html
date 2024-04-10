@@ -10,25 +10,57 @@
 </header> 
 <main>
 
+  
+      <style>
+          .container {
+              position: relative;
+              width: 100%;
+              height: 12vh;
+          }
+          .button-container {
+              position: absolute;
+              top: 0;
+              right: 0;
+              margin: 10px;
+              display: flex;
+              align-items: center;
+          }
+          .button {
+              background-color: #7D715E;
+              border-color: #7D715E;
+              padding: 10px 20px;
+              color: #706655;
+              cursor: pointer;
+              margin-left: 10px;
+          }
+          .button img {
+              width: 80px;
+          }
+      </style>
+  </head>
   <body>
-    <h1 style="background-color: #7D715E; display: flex; align-items: center; justify-content: space-between;">
-   <div class="container" >
-  <div class="row align-items-center">
-    <div class="col">
-      <a href="index.html"><img src="/IMG/retro.png" class="img-fluid" alt="..."></a>
-    </div>
-    <div class="col">
-      <button class="btn btn-primary"style="background-color: #7D715E;border-color:#7D715E;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" type="button">
-        <img src="/IMG/carrito2.png" class="img-fluid" width="80" alt="...">
-      </button>
-      <button class="btn btn-primary" style="background-color: #7D715E;border-color: #7D715E;"data-bs-toggle="sesion"  type="button">
-        <a href="sesion.html"><img src="/IMG/carrito.jpeg" class="img-fluid" width="95" alt="..."></a>
-      </button>
-    </div>
-  </div>
-</div>
-</h1>
-
+      <h1 style="background-color: #7D715E; display: flex; align-items: center; justify-content: space-between;">
+          <div class="container">
+              <div class="row align-items-center">
+                  <div class="col">
+                      <a href="index.html"><img src="/IMG/retro.png" class="img-fluid" alt="..."></a>
+                  </div>
+                  <div class="col">
+                      <div class="button-container">
+                          <button class="btn btn-primary button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" type="button">
+                              <img src="/IMG/carrito2.png" alt="...">
+                          </button>
+                          <button class="btn btn-primary button" data-bs-toggle="sesion" type="button">
+                              <a href="sesion.html"><img src="/IMG/carrito.jpeg" alt="..."></a>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </h1>
+  </body>
+  </html>
+  
 
   <!--offcanvas-->
     <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
@@ -91,36 +123,33 @@
       </button>
     </div>
   </div>
-
+  <p style="height: 400px;"><br ></p>
      <!-- botones -->
-     <ul class="list-group list-group-horizontal">
-      <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#staticDabdrop">
-        <img src="IMG/ff7.png" alt="" width="200" height="350" class="rounded">
-      </button>
-      </button>
-      <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#kirbi">
-        <img src="IMG/kb.png" alt="" width="200" height="350" class="rounded">
-      </button>
-      <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#sm">
-        <img src="IMG/sm.png" alt="" width="200" height="350" class="rounded">
-      </button>
-    </ul>
+     
+      <ul class="list-group list-group-horizontal">
+        <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#staticDabdrop">
+          <img src="IMG/ff7.png" alt="" width="200" height="350" class="rounded">
+        </button>
+        <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <img src="IMG/kb.png" alt="" width="200" height="350" class="rounded">
+        </button>
+        <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#centipede">
+          <img src="IMG/sm.png" alt="" width="200" height="350" class="rounded">
+        </button>
 
-    <ul class="list-group list-group-horizontal">
-      <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#staticDabdrop2">
+      </ul>
+  
+    <ul2 class="list-group list-group-horizontal">
+      <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#stati">
         <img src="IMG/ne.png" alt="" width="200" height="350" class="rounded">
       </button>
-      </button>
-      <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#zap">
+      <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#avan">
         <img src="IMG/zap.png" alt="" width="200" height="350" class="rounded">
       </button>
-      <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#scop">
+      <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#snes">
         <img src="IMG/scop.png" alt="" width="200" height="350" class="rounded">
       </button>
-    </ul>
-
-
-
+    </ul2>
 
      <!-- QUE COSA-->
   <div class="modal fade" id="staticDabdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -150,8 +179,34 @@
         </div>
       </div>
     </div>
-    <!--Ola cabros como estan-->
-  <div class="modal fade" id="kirbi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="IMG/Kirby's_Adventure_Coverart.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
+            <br>
+            <b class="d-block text-center">Kirby's Adventure</b>
+            <br>
+            <h6 class="text-center">
+              Precio: 50.000 CLP
+              <br>
+              Para Nintendo Entertaintment System
+            </h6>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+     <!--Tercer Modal-->
+  <div class="modal fade" id="centipede" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -159,12 +214,12 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <img src="IMG/Kirby's_Adventure_Coverart.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
+          <img src="IMG/sup.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
           <br>
-          <b class="d-block text-center">Kirby's Adventure</b>
+          <b class="d-block text-center">Super mario bros.</b>
           <br>
           <h6 class="text-center">
-            Precio: 45.000 CLP
+            Precio: 55.000 CLP 
             <br>
             Para Nintendo Entertaintment System
           </h6>
@@ -176,8 +231,11 @@
       </div>
     </div>
   </div>
- <!--Tercer Modal-->
- <div class="modal fade" id="sm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+</div>
+
+
+ <!--+ Modal-->
+ <div class="modal fade" id="snes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -185,14 +243,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <img src="IMG/sup.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
+        <img src="IMG/scope2.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
         <br>
-        <b class="d-block text-center">Super Mario Bros.</b>
+        <b class="d-block text-center">Super scope</b>
         <br>
         <h6 class="text-center">
-          Precio: 50.000 CLP
+          Precio: 35.000 CLP 
           <br>
-          Para NES
+          Para SNES
         </h6>
       </div>
       <div class="modal-footer">
@@ -202,6 +260,81 @@
     </div>
   </div>
 </div>
-
- 
-</html>
+ <!--+ Modal-->
+ <div class="modal fade" id="avan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="IMG/zapper2.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
+        <br>
+        <b class="d-block text-center">zapper</b>
+        <br>
+        <h6 class="text-center">
+          Precio: 45.000 CLP 
+          <br>
+          Para Nintendo Entertaintment System
+        </h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <!--Ola cabros como estan-->
+      <div class="modal fade" id="stati" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="IMG/nes.jpg" alt="" width="200" height="350" class="d-block mx-auto rounded">
+              <br>
+              <b class="d-block text-center">Mando de NES mini</b>
+              <br>
+              <h6 class="text-center">
+                Precio: 25.000 CLP
+                <br>
+                Para NES mini 
+              </h6>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+         <!--Ola cabros como estan-->
+      <div class="modal fade" id="13113" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="IMG/OIP (2).jpeg" alt="" width="200" height="350" class="d-block mx-auto rounded">
+              <br>
+              <b class="d-block text-center">nunchuck</b>
+              <br>
+              <h6 class="text-center">
+                Precio: 20.000 CLP
+                <br>
+                Para Nintendo Wii
+              </h6>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+     
+    </html>
