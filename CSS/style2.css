@@ -1,0 +1,140 @@
+.contenedor {
+    display: flex;
+    background-color: rgb(168, 166, 166);
+    width: 1500px;
+    height: 2000px;
+    justify-content: space-evenly;
+    margin-top: 170px;
+    flex-wrap: wrap;
+    gap: 100px;
+    align-content: flex-start;
+}
+
+body {
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(204, 204, 204);
+}
+
+
+.nav {
+    background-color: #da2727;
+    height: 160px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0%;
+}
+
+.n1 {
+    width: 100%;
+    border: 1px solid rgb(76, 76, 76);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.n2 {
+    width: 100%;
+    border: 1px solid rgb(76, 76, 76);
+    height: 80px;
+    display: flex;
+    justify-content: start;
+}
+
+.section {
+    /*border: 1px solid rgb(76, 76, 76); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    height: 60px;
+    width: 60px;
+    margin-left: 20px;
+}
+
+.i3 {
+    height: 60px;
+    width: 60px;
+}
+
+.logo {
+    width: 480px;
+    height: 70px;
+}
+
+.s1 {
+    width: 480px;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.s2 {
+    height: 100%;
+    width: 60%;
+    justify-content: right;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.s3 {
+    justify-content: center;
+    width: 22%;
+    gap: 20px;
+}
+
+@media(max-width:1000px) {
+
+    .s1,
+    .s3 {
+        width: 250px;
+    }
+}
+
+
+
+.contacto {
+    display: flex;
+    width: 80%;
+    height: 1500px;
+    box-shadow: 10px 10px 5px gray;
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario {
+    display: flex;
+    border: 0px solid white;
+    width: 90%;
+    height: 100px;
+    margin-top: 15px;
+}
+
+.info {
+    height: 100%;
+    width: 100%;
+    border: 0px solid darkorange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.in1 {
+    height: 100%;
+    width: 100%;
+    border: 0px solid darkorange;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}

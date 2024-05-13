@@ -5,66 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iniciarsesion</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
-    <h1 style="background-color: #7D715E; display: flex; align-items: center; justify-content: space-between;">
-        <div class="container" >
-       <div class="row align-items-center">
-         <div class="col">
-            <a href="index.html"><img src="/IMG/retro.png" class="img-fluid" alt="..."></a>
-        </div>
-         <div class="col">
-           <button class="btn btn-primary"style="background-color: #7D715E;border-color:#7D715E;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" type="button">
-             <img src="/IMG/carrito2.png" class="img-fluid" width="80" alt="...">
-           </button>
-           <button class="btn btn-primary" style="background-color: #7D715E;border-color: #7D715E;"data-bs-toggle="offcanvas"  type="button">
-            <a href="sesion.html"><img src="IMG/carrito.jpeg" alt="" class="img-fluid" width="95"></a>
-           </button>
-         </div>
-       </div>
-     </div>
-     </h1>
-     <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Carrito de compras</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <p> Total</p>
-        </div>
-      </div>
-  
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Iniciar Sesion</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-toggler">
+        <a class="navbar-brand" href="#">
+          <img class="img-fluid" src="IMG/retrodefinitivo.jpg" alt="logo">
+        </a>
+        <ul class="navbar-nav d-flex justify-content-center align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="juegos.html">Juegos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="accesorios.html">Accesorios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+        <div class="iconos-contenedor">
+          <a class="navbar-brand" href="sesion.html">
+            <i class="bi bi-person-circle"></i>
+          </a>
+          <button class="navbar-brand" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling" type="button">
+            <i class="bi bi-cart"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="juegos.html">Juegos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="accesorios.html">accesorios</a>
-              </li>
-            </ul>
-            <span class="navbar-text">
-              Navbar text with an inline element
-            </span>
-          </div>
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
+ 
 
-      <h3 class="text-center d-block mx-auto">Iniciar sesion con tu cuenta Retrofactory</h3>
-      <div class="mb-4">
-        <label for="exampleFormControlInput1" class="form-label">Correo Electronico:</label>
-        <input type="email" class="form-control border-success" id="exampleFormControlInput1" placeholder="">
+
+
+
+  <div class="contenedor">
+
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Carrito de compras</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <div class="offcanvas-body">
+        <a><img src="/IMG/nes.jpg" style="height: 100px;width: 150px;" class="img" alt="..."></a> 25.000 clp <a><img
+          src="/IMG/zapper.png" style="height: 90px;width: 140px;" class="img" alt="..."> 45.000 CLP</a>
+        <p> Total : 70.000 clp</p>
+        <button type="button" style="background-color: aquamarine;" class="btn btn-outline-primary"
+        data-bs-toggle="modal">
+          <a href="carrito.html">Pagar</a>
+        </button>
+      </div>
+    </div>
+
+    <div class="contacto">
+      <div class="formulario">
+        <div class="info" style="text-decoration: underline;">Iniciar sesión</div>
+      </div>
+    
+      <div class="formulario">
+        <div class="info" style="width: 50%;">
+          Email:
+        </div>
+        <div class="info">
+          <input type="email" class="form-control border-success" id="email" placeholder="">
+        </div>
+      </div>
+    
+      <div class="formulario">
+        <div class="info" style="width: 50%;">
+          Contraseña:
+        </div>
+        <div class="info">
+          <input type="email" class="form-control border-success" id="pass" placeholder="">
+        </div>
+      </div>
+    
+      <div id="resultado">
+      </div>
+    
+      <div class="formulario">
+        <div class="info">
+          <input type="submit" class="btn btn-outline-success" value="Iniciar sesión" onclick="validacion_ini()">
+        </div>
+        <div class="info">
+          <input type="reset" id="btnRes" value="Limpiar" class="btn btn-outline-warning">
+        </div>
+      </div>
+    
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/funciones.js"></script>
 </body>
 </html>
