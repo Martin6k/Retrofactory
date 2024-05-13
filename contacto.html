@@ -116,13 +116,42 @@
         <label for="exampleFormControlInput1" class="form-label">Email:</label>
         <input  type="email" class="form-control border-success" id="exampleFormControlInput1" placeholder="">
       </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <button  style="color: black; background-color:yellow;border-color: black;" class="btn btn-primary button"  type="button">
         Enviar
     </button>
-   
-      
+   <script>
+    function validar() {
+      let user = $("#username").val();
+      let pass = $("#pass").val();
+
+      if (user.length >= 5  && user.includes("@") && user.includes(".")) {
+          if (pass.length >= 6 ) {
+              $("#username").css("border", "5px solid green");
+              $("#pass").css("border", "5px solid green");
+              $("#resultado").html("<div class='alert alert-success w-50 mx-auto text-center'>" +
+                  "Acceso Concedido</div>");
+          } else {
+              $("#username").css("border", "5px solid green");
+              $("#pass").css("border", "5px solid red");
+              $("#resultado").html("<div class='alert alert-danger w-50 mx-auto text-center'>" +
+                  "La contraseña debe tener al menos 6 caracteres</div>");
+          }
+        
+      } else {
+        if (pass.length >= 6 ) {
+              $("#username").css("border", "5px solid red");
+              $("#pass").css("border", "5px solid green");
+              $("#resultado").html("<div class='alert alert-danger w-50 mx-auto text-center'>" +
+                  "El correo ingresado no es valido</div>");
+          } else {
+            $("#username").css("border", "5px solid red");
+            $("#pass").css("border", "5px solid red");
+            $("#resultado").html("<div class='alert alert-danger w-50 mx-auto text-center'>" +
+              "El correo ingresado no es valido  (pruebe agregarle @  o puntos al correo )  y la contraseña es muy corta (debe ser de minimo 10 caracteres) </div>");
+      }
+  }
+}
+</script>
 </body>
 </html>
           
