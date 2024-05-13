@@ -119,12 +119,11 @@
               let email = $("#correo-e").val();
               let key = $("#clave").val();
   
-              if (email.length >= 5  && (email.includes("@email.com") || email.includes("@hotmail.com")|| email.includes("@outlook.com") || email.includes("@duocuc.cl")) && email.includes(".")) {
-                  if (key.length >= 6 ) {
-                      $("#correo-e").css("border", "5px solid green");
-                      $("#clave").css("border", "5px solid green");
-                      $("#resultado").html("<div class='alert alert-success w-60 mx-auto text-center'>" +
-                          "Acceso Concedido</div>");
+              if (email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+        if (key.length >= 6) {
+            $("#correo-e").css("border", "5px solid green");
+            $("#clave").css("border", "5px solid green");
+            $("#resultado").html("<div class='alert alert-success w-60 mx-auto text-center'>" + "Acceso Concedido</div>");
                   } else {
                       $("#correo-e").css("border", "5px solid green");
                       $("#clave").css("border", "5px solid red");
