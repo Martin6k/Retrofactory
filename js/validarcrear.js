@@ -1,7 +1,7 @@
 function valicuenta(){ 
     var email = document.getElementById("email").value;
     var pass = document.getElementById("contrasena").value;
-    if(String(email).includes('@gmail.com') || String(email).includes('@yahoo.com') || String(email).includes('@outlook.com') || String(email).includes('@hotmail.com')){
+    if((email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/))){
         if(String(pass).length >= 8 && String(pass).length <= 15){
             /* a */
             document.getElementById("email").style.border = "1px solid lightgrey";
