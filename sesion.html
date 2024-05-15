@@ -81,7 +81,7 @@
           Email:
         </div>
         <div class="info">
-          <input type="email" class="form-control border-success" id="email" placeholder="">
+          <input type="email" style="border: solid;border-color: black; "  class="form-control" id="correo-e" placeholder="">
         </div>
       </div>
     
@@ -90,7 +90,7 @@
           Contraseña:
         </div>
         <div class="info">
-          <input type="email" class="form-control border-success" id="pass" placeholder="">
+          <input type="password" style="border: solid;border-color:black "  class="form-control" id="clave" placeholder="">
         </div>
       </div>
     
@@ -99,7 +99,7 @@
     
       <div class="formulario">
         <div class="info">
-          <input type="submit" class="btn btn-outline-success" value="Iniciar sesión" onclick="validacion_ini()">
+          <input type="submit"  class="btn btn-outline-success" value="Iniciar sesión" onclick="validar()">
         </div>
         <div class="info">
           <input type="reset" id="btnRes" value="Limpiar" class="btn btn-outline-warning">
@@ -109,7 +109,37 @@
     </div>
 
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="js/funciones.js"></script>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script> 
+    function validar() {
+           let email = $("#correo-e").val();
+           let key = $("#clave").val();
+
+           if (email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+                 if (key.length >= 6) {
+                     $("#correo-e").css("border", "5px solid green");
+                     $("#clave").css("border", "5px solid green");
+                     $("#resultado").html("<div class='alert alert-success w-60 mx-auto text-center'>" + "Acceso Concedido</div>");
+               } else {
+                   $("#correo-e").css("border", "5px solid green");
+                   $("#clave").css("border", "5px red");
+                   $("#resultado").html("<div class='alert alert-danger w-60 mx-auto text-center'>" +
+                       "La contraseña debe tener al menos 6 caracteres</div>");
+               }
+             
+           } else {
+             if (key.length >= 6 ) {
+                   $("#correo-e").css("border", "5px solid red");
+                   $("#clave").css("border", "5px solid green");
+                   $("#resultado").html("<div class='alert alert-danger w-60 mx-auto text-center'>" +
+                       "El correo ingresado no es valido</div>");
+               } else {
+                 $("#correo-e").css("border", "5px solid red");
+                 $("#clave").css("border", "5px solid red");
+                 $("#resultado").html("<div class='alert alert-danger w-60 mx-auto text-center'>" +
+                   "El correo ingresado no es valido  (pruebe agregarle @  o puntos al correo )  y la contraseña es muy corta (debe ser de minimo 10 caracteres) </div>");
+           }
+       }
+     }</script>
 </body>
 </html>
