@@ -111,6 +111,11 @@
   </div>
   <script src="../js/jquery-3.7.1.min.js"></script>
   <script> 
+  document.getElementById("btnRes").addEventListener("click", function() {
+  document.getElementById("clave").value = "";
+  document.getElementById("correo-e").value = "";
+});
+
     function validar() {
            let email = $("#correo-e").val();
            let key = $("#clave").val();
