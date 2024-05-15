@@ -6,6 +6,8 @@ function valicuenta(){
             /* a */
             document.getElementById("email").style.border = "1px solid lightgrey";
             document.getElementById("contrasena").style.border = "1px solid lightgrey";
+            document.getElementById("resultado").innerHTML = "<div style='margin-top: 2%' class='alert alert-success w-50 mx-auto text-center'>" +
+            "Validado exitosamente</div>"
             /* b */
             document.getElementById("resultado").innetHTML = "<div style='margin-top: 2%' class='alert alert-success w-50 mx-auto text-center'>" +
             "Cuenta creada con exito</div>"
