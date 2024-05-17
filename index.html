@@ -56,60 +56,80 @@
   <!-- Portada -->
   <section class="hero align-items-stretch">
     <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
-      <img class="hero-img" src="IMG/portada.jpg" alt="yo">
+      <img class="hero-img" src="IMG/portada2.0.png" alt="yo">
       <div class="portadad">
         <p>Bienvenidos a Retrofactory</p>
       </div>
     </div>
   </section>
 
-  <!-- Carrousel -->
-  <div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
+
+  <!--Carrusel-->
+  <section>
+    <div class="carousel slide  border border-warning-subtle border-3" id="carouselDemo"
+    data-bs-wrap="true"
+    data-bs-ride="carousel">
+  
+      <div class="carousel-inner">
+  
+        <div class="carousel-item active"
+        data-bs-interval="4000">
+          <img src="IMG/Consolas/atarihd.png" class="w-100" alt="">
+        </div>
+  
+        <div class="carousel-item"
+        data-bs-interval="4000">
+          <img src="IMG/Consolas/cubojuego.png" class="w-100" alt="">
+        </div>
+  
+        <div class="carousel-item"
+        data-bs-interval="4000">
+          <img src="IMG/Consolas/playstation.png" class="w-100" alt="">
+        </div>
+  
+      </div>
+  
+      <button class="carousel-control-prev bg-dark rounded-circle top-50 start-0 translate-middle-y" type="button"
+      data-bs-target="#carouselDemo"
+      data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+  
+      <button class="carousel-control-next bg-dark rounded-circle top-50 end-0 translate-middle-y" type="button"
+      data-bs-target="#carouselDemo"
+      data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+  
+      <div class="carousel-indicators">
+        <button type="button" class="active bg-dark" data-bs-target="#carouselDemo"
+        data-bs-slide-to="0"></button>
+        <button type="button" class="bg-dark" data-bs-target="#carouselDemo"
+        data-bs-slide-to="1"></button>
+        <button type="button" class="bg-dark" data-bs-target="#carouselDemo"
+        data-bs-slide-to="2"></button>
+      </div>
+  
     </div>
-    <div class="carousel-inner">
-      <!-- me falta poner las imagenes al centro -->
-      <div class="carousel-item active">
-        <img src="IMG/Consolas/imagen1.png" class="d-flex" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="IMG/Consolas/imagen2.png" class="d-flex" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="IMG/Consolas/imagen3.jpeg" class="d-flex" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+
+  </section>
   
   <!--offcanvas-->
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Carrito de compras</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Carrito de compras</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
       <a>
-        <img src="/IMG/nes.jpg" style="height: 100px;width: 150px;" class="img" alt="...">
-      </a>        25.000 clp          
-      <a >
-        <img src="/IMG/zapper.png" style="height: 90px;width: 140px;" class="img" alt="..."> 45.000 CLP
-      </a>  
-      <p> Total : 70.000  clp</p>
-      <button href="carrito.html" type="button" style="background-color: aquamarine;" class="btn btn-outline-primary" data-bs-toggle="modal"><a href="carrito.html">Pagar</a></button>
+        <img src="/IMG/Juegos/kirbysadventure.png" style="height: 100px;width: 150px;" class="img" alt="...">
+      </a> Precio: 80.000 CLP
+      <a>
+        <img src="/IMG/Consolas/nes.png" style="height: 90px;width: 140px;" class="img" alt="..."> Precio: 100.000 CLP
+      </a>
+      <p> Total : 180.000 clp</p>
+      <button href="carrito.html" type="button" style="background-color: aquamarine;" class="btn btn-outline-primary"
+        data-bs-toggle="modal"><a href="carrito.html">Pagar</a></button>
     </div>
   </div>
 
@@ -120,24 +140,24 @@
       <div class="row">
         <div class="col-12 col-md-6 col-lg-4">
           <div class="juegos">
-            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticDabdrop">
-              <img src="IMG/Juegos/juego1.jpg" alt="" width="200" height="350" class="rounded">
+            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal" data-bs-target="#c1">
+              <img src="IMG/Juegos/ataricentipede.png" alt="" width="200" height="350" class="rounded">
             </button>
           </div>
         </div>
         <!--otro-->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="juegos">
-            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticDabdrop">
-              <img src="IMG/Juegos/juego2.jpg" alt="" width="200" height="350" class="rounded">
+            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal" data-bs-target="#c2">
+              <img src="IMG/Juegos/choquemarsupial.png" alt="" width="200" height="350" class="rounded">
             </button>
           </div>
         </div>
         <!--otro-->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="juegos">
-            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticDabdrop">
-              <img src="IMG/Juegos/juego3.jpg" alt="" width="200" height="350" class="rounded">
+            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal" data-bs-target="#c3">
+              <img src="IMG/Juegos/FF7.png" alt="" width="200" height="350" class="rounded">
             </button>
           </div>
         </div>
@@ -151,8 +171,8 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="juegos">
             <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal"
-              data-bs-target="#staticDabdrop">
-              <img src="IMG/Consolas/imagen1.png" alt="" width="200" height="350" class="rounded">
+              data-bs-target="#c4">
+              <img src="IMG/Consolas/tecladoraro.png" alt="" width="200" height="350" class="rounded">
             </button>
           </div>
         </div>
@@ -160,8 +180,8 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="juegos">
             <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal"
-              data-bs-target="#staticDabdrop">
-              <img src="IMG/Consolas/imagen2.png" alt="" width="200" height="350" class="rounded">
+              data-bs-target="#c5">
+              <img src="IMG/Consolas/nes.png" alt="" width="200" height="350" class="rounded">
             </button>
           </div>
         </div>
@@ -169,8 +189,8 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="juegos">
             <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal"
-              data-bs-target="#staticDabdrop">
-              <img src="IMG/Consolas/imagen3.jpeg" alt="" width="200" height="350" class="rounded">
+              data-bs-target="#c6">
+              <img src="IMG/Consolas/gameboy.png" alt="" width="200" height="350" class="rounded">
             </button>
           </div>
         </div>
@@ -184,8 +204,8 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="juegos">
             <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal"
-              data-bs-target="#staticDabdrop">
-              <img src="IMG/Accesorios/accesorio1.jpg" alt="" width="200" height="350" class="rounded">
+              data-bs-target="#c7">
+              <img src="IMG/Accesorios/nesflaite.png" alt="" width="200" height="350" class="rounded">
             </button>
           </div>
         </div>
@@ -193,8 +213,8 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="juegos">
             <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal"
-              data-bs-target="#staticDabdrop">
-              <img src="IMG/Accesorios/accesorio2.jpg" alt="" width="200" height="350" class="rounded">
+              data-bs-target="#c8">
+              <img src="IMG/Accesorios/rob.png" alt="" width="200" height="350" class="rounded">
             </button>
           </div>
         </div>
@@ -202,8 +222,8 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="juegos">
             <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal"
-              data-bs-target="#staticDabdrop">
-              <img src="IMG/Accesorios/accesorio3.jpeg" alt="" width="200" height="350" class="rounded">
+              data-bs-target="#c9">
+              <img src="IMG/Accesorios/wiimariokart.png" alt="" width="200" height="350" class="rounded">
             </button>
           </div>
         </div>
@@ -214,7 +234,7 @@
   </section>
     
   <!-- MODAL 1 -->
-  <div class="modal fade" id="staticDabdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="c1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -226,24 +246,24 @@
           <img src="IMG/71350ljw7SL.jpg" alt="" width="200" height="350" class="d-block mx-auto rounded">
           <br>
           <b class="text-center d-block">
-            Final Fantasy 7
+            Centipide
           </b>
           <br>
           <h6 class="text-center">
-            Para PSX
+            Atari 5200
             <br>
-            Precio:30.000 CLP
+            Precio: 30.000 CLP
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Agregar</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- MODAL 2 -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="c2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -253,24 +273,24 @@
         <div class="modal-body">
           <img src="IMG/Kirby's_Adventure_Coverart.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
           <br>
-          <b class="d-block text-center">Kirby's Adventure</b>
+          <b class="d-block text-center">Crash Bandicoot</b>
           <br>
           <h6 class="text-center">
             Precio: 50.000 CLP
             <br>
-            Para Nintendo Entertaintment System
+            PSX
           </h6>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Agregar</button>
         </div>
       </div>
     </div>
   </div>
       
   <!-- MODAL 3 -->
-  <div class="modal fade" id="centipede" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="c3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -280,25 +300,24 @@
         <div class="modal-body">
           <img src="IMG/sup.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
           <br>
-          <b class="d-block text-center">Super mario bros.</b>
+          <b class="d-block text-center">Final Fantasy VII</b>
           <br>
           <h6 class="text-center">
             Precio: 55.000 CLP 
             <br>
-            Para Nintendo Entertaintment System
+            PSX
           </h6>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Agregar</button>
         </div>
       </div>
     </div>
-  </div>
-    
+  </div>   
     
   <!-- MODAL 4 -->
-  <div class="modal fade" id="snes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="c4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -308,24 +327,24 @@
         <div class="modal-body">
           <img src="IMG/scope2.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
           <br>
-          <b class="d-block text-center">Super scope</b>
+          <b class="d-block text-center">ZX Spectrum</b>
           <br>
           <h6 class="text-center">
-            Precio: 35.000 CLP 
+            Precio: 80.000 CLP 
             <br>
-            Para SNES
+            Sinclair Research
           </h6>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Agregar</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- MODAL 5 -->
-  <div class="modal fade" id="avan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="c5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -335,24 +354,24 @@
         <div class="modal-body">
           <img src="IMG/zapper2.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
           <br>
-          <b class="d-block text-center">zapper</b>
+          <b class="d-block text-center">NES</b>
           <br>
           <h6 class="text-center">
-            Precio: 45.000 CLP 
+            Precio: 100.000 CLP 
             <br>
-            Para Nintendo Entertaintment System
+            Nintendo
           </h6>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Agregar</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- MODAL 6 -->
-  <div class="modal fade" id="stati" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="c6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -362,24 +381,24 @@
         <div class="modal-body">
           <img src="IMG/nes.jpg" alt="" width="200" height="350" class="d-block mx-auto rounded">
           <br>
-          <b class="d-block text-center">Mando de NES mini</b>
+          <b class="d-block text-center">GameBoy Advance</b>
           <br>
           <h6 class="text-center">
-            Precio: 25.000 CLP
+            Precio: 120.000 CLP
             <br>
-            Para NES mini 
+            Nintendo
           </h6>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Agregar</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- MODAL 7 -->
-  <div class="modal fade" id="13113" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="c7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -389,17 +408,73 @@
         <div class="modal-body">
           <img src="IMG/OIP (2).jpeg" alt="" width="200" height="350" class="d-block mx-auto rounded">
           <br>
-          <b class="d-block text-center">nunchuck</b>
+          <b class="d-block text-center">NES Advantage</b>
           <br>
           <h6 class="text-center">
             Precio: 20.000 CLP
+            <br>
+            Para NES
+          </h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 8 -->
+  <div class="modal fade" id="c8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="IMG/OIP (2).jpeg" alt="" width="200" height="350" class="d-block mx-auto rounded">
+          <br>
+          <b class="d-block text-center">R.O.B</b>
+          <br>
+          <h6 class="text-center">
+            Precio: 50.000 CLP
+            <br>
+            Para NES
+          </h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 9 -->
+  <div class="modal fade" id="c9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="IMG/OIP (2).jpeg" alt="" width="200" height="350" class="d-block mx-auto rounded">
+          <br>
+          <b class="d-block text-center">Volante</b>
+          <br>
+          <h6 class="text-center">
+            Precio: 40.000 CLP
             <br>
             Para Nintendo Wii
           </h6>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Agregar/button>
         </div>
       </div>
     </div>
