@@ -1,161 +1,240 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
- 
-  </main>
-</header> 
-<main>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página principal</title>
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+</head>
+<body>
 
-  
-      <style>
-          .container {
-              position: relative;
-              width: 100%;
-              height: 12vh;
-          }
-          .button-container {
-              position: absolute;
-              top: 0;
-              right: 0;
-              margin: 10px;
-              display: flex;
-              align-items: center;
-          }
-          .button {
-              background-color: #7D715E;
-              border-color: #7D715E;
-              padding: 10px 20px;
-              color: #706655;
-              cursor: pointer;
-              margin-left: 10px;
-          }
-          .button img {
-              width: 80px;
-          }
-      </style>
-  </head>
-  <body>
-      <h1 style="background-color: #7D715E; display: flex; align-items: center; justify-content: space-between;">
-          <div class="container">
-              <div class="row align-items-center">
-                  <div class="col">
-                      <a href="index.html"><img src="/IMG/retro.png" class="img-fluid" alt="..."></a>
-                  </div>
-                  <div class="col">
-                      <div class="button-container">
-                          <button class="btn btn-primary button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" type="button">
-                              <img src="/IMG/carrito2.png" alt="...">
-                          </button>
-                          <button class="btn btn-primary button" data-bs-toggle="sesion" type="button">
-                              <a href="sesion.html"><img src="/IMG/carrito.jpeg" alt="..."></a>
-                          </button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </h1>
-  </body>
- 
-  
-
-  <!--offcanvas-->
-    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Carrito de compras</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <a><img src="/IMG/nes.jpg" style="height: 100px;width: 150px;" class="img" alt="..."></a>        25.000 clp          <a ><img src="/IMG/zapper.png" style="height: 90px;width: 140px;" class="img" alt="..."> 45.000 CLP</a>  <p> Total : 70.000  clp</p>
-        <button href="carrito.html" type="button" style="background-color: aquamarine;" class="btn btn-outline-primary" data-bs-toggle="modal"><a href="carrito.html">Pagar</a></button>
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-toggler">
+        <a class="navbar-brand" href="#">
+          <img class="img-fluid" src="IMG/retrodefinitivo.jpg" alt="logo">
+        </a>
+        <ul class="navbar-nav d-flex justify-content-center align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="juegos.html">Juegos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="accesorios.html">Accesorios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+        <div class="iconos-contenedor d-flex">
+          <a class="navbar-brand" href="sesion.html">
+            <i class="bi bi-person-circle"></i>
+          </a>
+          <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling" type="button">
+            <i class="bi bi-cart"></i>
+          </button>
+        </div>
       </div>
     </div>
+  </nav>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="juegos.html">Juegos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="accesorios.html">accesorios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">contacto</a>
-              </li>
-            </ul>
-            <span class="navbar-text">
-             
-            </span>
-          </div>
-        </div>
-      </nav>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body> 
-  <div class="container">
-    <div style="background-color: white;" id="carouselExample" class="carousel slide" >
-      <div  class="carousel-inner">
-        <div  class="carousel-item active">
-          <img src="IMG\consola.jpg" class="d-block w-800" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="IMG\consola2.jpg"  class ="d-block w-800 " alt="IMG\consola2.jpg">
-        </div>
-        <div class="carousel-item">
-          <img style="background-color: white;" src="IMG\consola3.png"  class="d-block w-800" alt="IMG\consola3.png">
-        </div>
+  <!-- Portada -->
+  <section class="hero align-items-stretch">
+    <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
+      <img class="hero-img" src="IMG/portada2.0.png" alt="yo">
+      <div class="portadad">
+        <p>Bienvenidos a Retrofactory</p>
       </div>
-      <button style="background-color: rgb(255, 96, 96);" class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span  class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span  class="visually-hidden">Previous</span>
+    </div>
+  </section>
+
+
+  <!--Carrusel-->
+  <section>
+    <div class="carousel slide  border border-warning-subtle border-3" id="carouselDemo"
+    data-bs-wrap="true"
+    data-bs-ride="carousel">
+  
+      <div class="carousel-inner">
+  
+        <div class="carousel-item active"
+        data-bs-interval="4000">
+          <img src="IMG/Consolas/atarihd.png" class="w-100" alt="">
+        </div>
+  
+        <div class="carousel-item"
+        data-bs-interval="4000">
+          <img src="IMG/Consolas/cubojuego.png" class="w-100" alt="">
+        </div>
+  
+        <div class="carousel-item"
+        data-bs-interval="4000">
+          <img src="IMG/Consolas/playstation.png" class="w-100" alt="">
+        </div>
+  
+      </div>
+  
+      <button class="carousel-control-prev bg-dark rounded-circle top-50 start-0 translate-middle-y" type="button"
+      data-bs-target="#carouselDemo"
+      data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
       </button>
-      <button style="background-color: rgb(255,96, 96);" class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span  class="visually-hidden">Next</span>
+  
+      <button class="carousel-control-next bg-dark rounded-circle top-50 end-0 translate-middle-y" type="button"
+      data-bs-target="#carouselDemo"
+      data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
       </button>
+  
+      <div class="carousel-indicators">
+        <button type="button" class="active bg-dark" data-bs-target="#carouselDemo"
+        data-bs-slide-to="0"></button>
+        <button type="button" class="bg-dark" data-bs-target="#carouselDemo"
+        data-bs-slide-to="1"></button>
+        <button type="button" class="bg-dark" data-bs-target="#carouselDemo"
+        data-bs-slide-to="2"></button>
+      </div>
+  
+    </div>
+
+  </section>
+  
+  <!--offcanvas-->
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Carrito de compras</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a>
+        <img src="/IMG/Juegos/kirbysadventure.png" style="height: 100px;width: 150px;" class="img" alt="...">
+      </a> Precio: 80.000 CLP
+      <a>
+        <img src="/IMG/Consolas/nes.png" style="height: 90px;width: 140px;" class="img" alt="..."> Precio: 100.000 CLP
+      </a>
+      <p> Total : 180.000 clp</p>
+      <button href="carrito.html" type="button" style="background-color: aquamarine;" class="btn btn-outline-primary"
+        data-bs-toggle="modal"><a href="carrito.html">Pagar</a></button>
     </div>
   </div>
-  <p style="height: 400px;"><br ></p>
-     <!-- botones -->
-     
-      <ul class="list-group list-group-horizontal">
-        <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#staticDabdrop">
-          <img src="IMG/ff7.png" alt="" width="200" height="350" class="rounded">
-        </button>
-        <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-          <img src="IMG/kb.png" alt="" width="200" height="350" class="rounded">
-        </button>
-        <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#centipede">
-          <img src="IMG/sm.png" alt="" width="200" height="350" class="rounded">
-        </button>
 
-      </ul>
-  
-    <ul2 class="list-group list-group-horizontal">
-      <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#stati">
-        <img src="IMG/ne.png" alt="" width="200" height="350" class="rounded">
-      </button>
-      <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#avan">
-        <img src="IMG/zap.png" alt="" width="200" height="350" class="rounded">
-      </button>
-      <button type="button" class="btn rounded d-block mx-auto" data-bs-toggle="modal" data-bs-target="#snes">
-        <img src="IMG/scop.png" alt="" width="200" height="350" class="rounded">
-      </button>
-    </ul2>
+  <!-- botones -->
+  <section class="vitrina d-flex flex-column">
+    <h2 class="seccion-titulo texto-negro">Juegos</h2>
+    <div class="container text-center vitrina-contenedor">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="juegos">
+            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal" data-bs-target="#c1">
+              <img src="IMG/Juegos/ataricentipede.png" alt="" width="200" height="350" class="rounded">
+            </button>
+          </div>
+        </div>
+        <!--otro-->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="juegos">
+            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal" data-bs-target="#c2">
+              <img src="IMG/Juegos/choquemarsupial.png" alt="" width="200" height="350" class="rounded">
+            </button>
+          </div>
+        </div>
+        <!--otro-->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="juegos">
+            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal" data-bs-target="#c3">
+              <img src="IMG/Juegos/FF7.png" alt="" width="200" height="350" class="rounded">
+            </button>
+          </div>
+        </div>
+        <!--otro-->
+      </div>
+    </div>
 
-     <!-- QUE COSA-->
-  <div class="modal fade" id="staticDabdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <h2 class="seccion-titulo texto-negro">Consolas</h2>
+    <div class="container text-center vitrina-contenedor">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="juegos">
+            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal"
+              data-bs-target="#c4">
+              <img src="IMG/Consolas/tecladoraro.png" alt="" width="200" height="350" class="rounded">
+            </button>
+          </div>
+        </div>
+        <!--otro-->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="juegos">
+            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal"
+              data-bs-target="#c5">
+              <img src="IMG/Consolas/nes.png" alt="" width="200" height="350" class="rounded">
+            </button>
+          </div>
+        </div>
+        <!--otro-->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="juegos">
+            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal"
+              data-bs-target="#c6">
+              <img src="IMG/Consolas/gameboy.png" alt="" width="200" height="350" class="rounded">
+            </button>
+          </div>
+        </div>
+        <!--otro-->
+      </div>
+    </div>
+
+    <h2 class="seccion-titulo texto-negro">Accesorios</h2>
+    <div class="container text-center vitrina-contenedor">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="juegos">
+            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal"
+              data-bs-target="#c7">
+              <img src="IMG/Accesorios/nesflaite.png" alt="" width="200" height="350" class="rounded">
+            </button>
+          </div>
+        </div>
+        <!--otro-->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="juegos">
+            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal"
+              data-bs-target="#c8">
+              <img src="IMG/Accesorios/rob.png" alt="" width="200" height="350" class="rounded">
+            </button>
+          </div>
+        </div>
+        <!--otro-->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="juegos">
+            <button type="button" class="btn rounded d-block mx-auto btn-outline-dark" data-bs-toggle="modal"
+              data-bs-target="#c9">
+              <img src="IMG/Accesorios/wiimariokart.png" alt="" width="200" height="350" class="rounded">
+            </button>
+          </div>
+        </div>
+        <!--otro-->
+      </div>
+    </div>
+
+  </section>
+    
+  <!-- MODAL 1 -->
+  <div class="modal fade" id="c1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -167,32 +246,20 @@
           <img src="IMG/Juegos/ataricentipede.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
           <br>
           <b class="text-center d-block">
-            Final Fantasy 7
+            Centipide
           </b>
           <br>
           <h6 class="text-center">
-            Para PSX
+            Atari 5200
             <br>
-            Precio:30.000 CLP
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-          </div>
+            Precio: 30.000 CLP
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Agregar</button>
         </div>
       </div>
     </div>
-<<<<<<< Updated upstream
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <img src="IMG/Kirby's_Adventure_Coverart.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
-=======
   </div>
 
   <!-- MODAL 2 -->
@@ -210,26 +277,20 @@
           <br>
           <h6 class="text-center">
             Precio: 50.000 CLP
->>>>>>> Stashed changes
             <br>
-            <b class="d-block text-center">Kirby's Adventure</b>
-            <br>
-            <h6 class="text-center">
-              Precio: 50.000 CLP
-              <br>
-              Para Nintendo Entertaintment System
-            </h6>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-          </div>
+            PSX
+          </h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Agregar</button>
         </div>
       </div>
     </div>
-  
-     <!--Tercer Modal-->
-  <div class="modal fade" id="centipede" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  </div>
+      
+  <!-- MODAL 3 -->
+  <div class="modal fade" id="c3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -239,19 +300,15 @@
         <div class="modal-body">
           <img src="IMG/Juegos/FF7.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
           <br>
-          <b class="d-block text-center">Super mario bros.</b>
+          <b class="d-block text-center">Final Fantasy VII</b>
           <br>
           <h6 class="text-center">
             Precio: 55.000 CLP 
             <br>
-            Para Nintendo Entertaintment System
+            PSX
           </h6>
         </div>
         <div class="modal-footer">
-<<<<<<< Updated upstream
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
-=======
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
           <button type="button" class="btn btn-primary">Agregar</button>
         </div>
@@ -281,31 +338,11 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
           <button type="button" class="btn btn-primary">Agregar</button>
->>>>>>> Stashed changes
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<<<<<<< Updated upstream
-
- <!--+ Modal-->
- <div class="modal fade" id="snes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="IMG/scope2.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
-        <br>
-        <b class="d-block text-center">Super scope</b>
-        <br>
-        <h6 class="text-center">
-          Precio: 35.000 CLP 
-=======
   <!-- MODAL 5 -->
   <div class="modal fade" id="c5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -316,35 +353,22 @@
         </div>
         <div class="modal-body">
           <img src="IMG/Consolas/nes.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
->>>>>>> Stashed changes
           <br>
-          Para SNES
-        </h6>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+          <b class="d-block text-center">NES</b>
+          <br>
+          <h6 class="text-center">
+            Precio: 100.000 CLP 
+            <br>
+            Nintendo
+          </h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Agregar</button>
+        </div>
       </div>
     </div>
   </div>
-<<<<<<< Updated upstream
-</div>
- <!--+ Modal-->
- <div class="modal fade" id="avan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="IMG/zapper2.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
-        <br>
-        <b class="d-block text-center">zapper</b>
-        <br>
-        <h6 class="text-center">
-          Precio: 45.000 CLP 
-=======
 
   <!-- MODAL 6 -->
   <div class="modal fade" id="c6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -356,43 +380,22 @@
         </div>
         <div class="modal-body">
           <img src="IMG/Consolas/gameboy.png" alt="" width="200" height="350" class="d-block mx-auto rounded">
->>>>>>> Stashed changes
           <br>
-          Para Nintendo Entertaintment System
-        </h6>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+          <b class="d-block text-center">GameBoy Advance</b>
+          <br>
+          <h6 class="text-center">
+            Precio: 120.000 CLP
+            <br>
+            Nintendo
+          </h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Agregar</button>
+        </div>
       </div>
     </div>
   </div>
-<<<<<<< Updated upstream
-</div>
-      <!--Ola cabros como estan-->
-      <div class="modal fade" id="stati" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <img src="IMG/nes.jpg" alt="" width="200" height="350" class="d-block mx-auto rounded">
-              <br>
-              <b class="d-block text-center">Mando de NES mini</b>
-              <br>
-              <h6 class="text-center">
-                Precio: 25.000 CLP
-                <br>
-                Para NES mini 
-              </h6>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-=======
 
   <!-- MODAL 7 -->
   <div class="modal fade" id="c7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -525,33 +528,16 @@
             <a href="index.html"><i class="bi bi-facebook"></i></a>
             <a href="index.html"><i class="bi bi-instagram"></i></a>
             <a href="index.html"><i class="bi bi-twitter-x"></i></a>
->>>>>>> Stashed changes
           </div>
+        
         </div>
-         <!--Ola cabros como estan-->
-      <div class="modal fade" id="13113" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <img src="IMG/OIP (2).jpeg" alt="" width="200" height="350" class="d-block mx-auto rounded">
-              <br>
-              <b class="d-block text-center">nunchuck</b>
-              <br>
-              <h6 class="text-center">
-                Precio: 20.000 CLP
-                <br>
-                Para Nintendo Wii
-              </h6>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-          </div>
-        </div>
-     
-    </html>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body> 
+</html>
