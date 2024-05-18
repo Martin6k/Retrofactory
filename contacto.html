@@ -55,7 +55,7 @@
     </div>
   </nav>
 
-  <!--offcanvas-->
+  <!--offcanvas  (le cambié lo del rut) -->
   <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
     id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
     <div class="offcanvas-header">
@@ -86,7 +86,7 @@
           </div>
           <div class="form-floating col-6 mx-auto mb-2">
             <input type="text" class="form-control" name="rut" id="rut">
-            <label for="rut">Rut:</label>
+            <label for="rut">Rut (Sin puntos, ni guión ):</label>
           </div>
           <div class="form-floating col mx-auto mb-2">
             <input type="text" class="form-control" name="fono" id="fono">
@@ -120,6 +120,7 @@
               <input type="submit" value="Enviar" class="btn btn-outline-success" style="margin-right: 2%;" onclick="valicuenta()">
               <input type="reset" value="Limpiar" class="btn btn-outline-danger">
               <button type="button" onclick="validacion_form()" style="margin-left: 2%;" class="btn btn-outline-primary">Validar</button>
+              <div></div>
             </div>
           </div>
         </form>
