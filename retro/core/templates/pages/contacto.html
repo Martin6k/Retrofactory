@@ -18,25 +18,6 @@
     
     {% include "base/header.html" %}
 
-  <!--offcanvas-->
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Carrito de compras</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <a>
-        <img src="{% static 'img/Juegos/kirbysadventure.png' %}" style="height: 100px;width: 150px;" class="img" alt="...">
-      </a> Precio: 80.000 CLP
-      <a>
-        <img src="{% static 'img/Consolas/nes.png' %}" style="height: 90px;width: 140px;" class="img" alt="..."> Precio: 100.000 CLP
-      </a>
-      <p> Total : 180.000 clp</p>
-      <button href="{% url 'carrito' %}" type="button" style="background-color: aquamarine;" class="btn btn-outline-primary"
-        data-bs-toggle="modal"><a href="{% url 'carrito' %}">Pagar</a></button>
-    </div>
-  </div>
-
   <!--Formulario C-->  
   <section>
     <div class="container-fluid">
