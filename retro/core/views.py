@@ -3,7 +3,6 @@ from .models import Genero, Usuario
 
 # Create your views here.
 def index(request):
-    usuarios = Usuario.objects.all()
     context={}
     return render(request,'pages/index.html', context)
 
@@ -30,3 +29,17 @@ def sesion(request):
 def crearsesion(request):
     context={}
     return render(request,'pages/crearsesion.html',context)
+
+def crud(request):
+    usuarios = Usuario.objects.all()
+    context = {
+        "usuarios":usuarios
+    }
+    return render(request, 'pages/crud.html',context)
+
+def crud_genero(request):
+    generos = Genero.objects.all()
+    context = {
+        "generos": generos,
+    }
+    return render(request,'pages/crud_genero.html',context)

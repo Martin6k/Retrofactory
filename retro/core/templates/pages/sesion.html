@@ -13,45 +13,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
-</head>
-<body>
+  </head>
+  <body>
     {% include "base/header.html" %}
-
-  <!--Inicio de Sesión-->
-  <section>
-    <div class="container vw-50 vh-50">
-      <div class="formulario">
-        <div class="info">
-          Email:
-        </div>
-        <div class="info">
-          <input type="email" style="border: solid;border-color: black; "  class="form-control" id="correo-e" placeholder="">
-        </div>
-      </div>
     
-      <div class="formulario">
-        <div class="info">
-          Contraseña:
-        </div>
-        <div class="info">
-          <input type="password" style="border: solid;border-color:black "  class="form-control" id="clave" placeholder="">
-        </div>
-      </div>
-    
-      <div id="resultado">
-      </div>
-    
-      <div class="formulario">
-        <div class="info">
-          <input type="submit"  class="btn btn-outline-success" value="Iniciar sesión" onclick="validar()">
-        </div>
-        <div class="info">
-          <input type="reset" id="btnRes" value="Limpiar" class="btn btn-outline-warning">
-        </div>
-        <a href="{% url 'crearsesion' %}">Registrarse</a>
+    <!--Inicio de Sesión-->
+    <div class="container-fluid">
+      <div class="row">
+        <form action="" method="" class="col-6 mx-auto shadow-lg text-center mt-3 mb-3 p-5" style="width: 70%;">
+          <h3>Inicio Sesión</h3>
+          <div class="form-floating col-6 mx-auto mb-2">
+            <input type="email" class="form-control" name="correo" id="correo-e">
+            <label for="correo">Email</label>
+          </div>
+          <div class="form-floating col-6 mx-auto mb-2">
+            <input type="password" class="form-control" name="pass" id="clave">
+            <label for="pass">Contraseña</label>
+          </div>
+          <div class="form-group list-group list-group-horizontal justify-content-center grid gap-3">
+            <div class="info">
+              <input type="submit"  class="btn btn-outline-success" value="Iniciar sesión" onclick="validar()">
+            </div>
+            <div class="info">
+              <input type="reset" id="btnRes" value="Limpiar" class="btn btn-outline-warning">
+            </div>
+            <a href="{% url 'crearsesion' %}">Registrarse</a>
+          </div>
+        </form>
       </div>
     </div>
-  </section>
 
     {% include "base/footer.html" %}
 

@@ -18,39 +18,37 @@
     {% include "base/header.html" %}
     
   <!--Carrito-->  
-  <div class="container-fluid">
-    <div class="row col-md-4 mx-auto shadow-lg text-center mt-3 p-5">
-      <div class="list-group list-group-horizontal">
-        <div>
-          <img src="{% static 'img/Juegos/kirbysadventure.png' %}" class="img-fluid d-block" alt="" style="height: 45%; display:block; margin-top: 60px;">
+  <div class="container-fluid mt-3 mb-3 p-5 shadow-lg">
+    <div class="row flex-column grid gap-4 ">
+
+      <div class="col-6 mx-auto shadow-lg text-center justify-content-center">
+        <div class="col-3">
+          <img src="{% static 'img/Juegos/kirbysadventure.png' %}" alt="" class="img-fluid">
         </div>
-        <div>
-          <p class="center d-block" style="margin-left: 50%; text-align: center; margin-top: 50%; ">Precio: 80.000$</p>
+        <div class="col-3">
+          <h2>Kirby's Adventure</h2>
+          <h4>Precio: 80.000</h4>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="container-fluid">
-    <div class="row col-md-4 mx-auto shadow-lg text-center mt-3 p-5">
-      <div class="list-group list-group-horizontal">
-        <div>
-          <img src="{% static 'img/Consolas/nes.png' %}" class="img-fluid d-block" alt="" style="height: 45%; display:block; margin-top: 60px;">
+      <div class="col-6 mx-auto shadow-lg text-center">
+        <div class="col-3">
+          <img src="{% static 'img/Consolas/nes.png' %}" alt="" class="img-fluid">
         </div>
-        <div>
-          <p class="center d-block" style="margin-left: 50%; text-align: center; margin-top: 50%; ">Precio: 100.000$</p>
+        <div class="col-3">
+          <h2>NES</h2>
+          <h4>Precio: 120.000</h4>
         </div>
       </div>
+
+      <div class="form-group list-group list-group-horizontal justify-content-center grid gap-3">
+        <button type="btn" class="btn btn-outline-success">Pagar</button>
+        <button type="btn" class="btn btn-outline-danger">Limpiar</button>
+      </div>
+      
     </div>
   </div>
 
-  <div class="container-fluid">
-    <div class="form-group list-group list-group-horizontal mx-auto">
-      <button type="btn" class="btn btn-outline-success mx-auto d-block" style="margin-top: 2%;">Pagar</button>
-      <button type="btn" class="btn btn-outline-danger mx-auto d-block" style="margin-top: 2%;">Limpiar</button>
-
-    </div>
-  </div>
 
     {% include "base/footer.html" %}
 
