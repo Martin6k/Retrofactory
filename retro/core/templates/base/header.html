@@ -1,0 +1,57 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-toggler">
+        <a class="navbar-brand" href="{% url 'index' %}">
+          <img class="img-fluid" src="{% static 'img/retrodefinitivo.jpg' %}" alt="logo">
+        </a>
+        <ul class="navbar-nav d-flex justify-content-center align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'juegos' %}">Juegos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'accesorios' %}">Accesorios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+          </li>
+        </ul>
+        <div class="iconos-contenedor d-flex">
+          <a class="navbar-brand" href="{% url 'sesion' %}">
+            <i class="bi bi-person-circle"></i>
+          </a>
+          <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling" type="button">
+            <i class="bi bi-cart"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <!--offcanvas-->
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Carrito de compras</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a>
+        <img src="{% static 'img/Juegos/kirbysadventure.png' %}" style="height: 100px;width: 150px;" class="img" alt="...">
+      </a> Precio: 80.000 CLP
+      <a>
+        <img src="{% static 'img/Consolas/nes.png' %}" style="height: 90px;width: 140px;" class="img" alt="..."> Precio: 100.000 CLP
+      </a>
+      <p> Total : 180.000 clp</p>
+      <button href="{% url 'carrito' %}" type="button" style="background-color: aquamarine;" class="btn btn-outline-primary"
+        data-bs-toggle="modal"><a href="{% url 'carrito' %}">Pagar</a></button>
+    </div>
+  </div>
