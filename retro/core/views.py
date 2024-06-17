@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Genero, Usuario
 from .forms import GeneroForm
 
+
 # Create your views here.
 def index(request):
     usuarios = Usuario.objects.all()
@@ -237,3 +238,53 @@ def genero_edit(request, pk):
             "generos":generos,
         }
         return render(request, "pages/crud_genero.html", context)
+    
+def loginSession(request):
+    if request.method == "POST":
+        username = request.POST["username"]
+        password = request.POST["password"]
+        if(username == "j.riquelmee" and password == "pass1234"):
+            request.session["user"] = username
+            usuarios = Usuario.objects.all()
+            context = {
+                "usuarios":usuarios
+            }
+            return render(context, "pages/crud.html", context)
+        else:
+            context = {
+                "mensaje":"Credenciales incorrectos",
+                "design":"alert alert-danger w-50 mx-auto text-center",
+            }
+            return render(request, "pages/login.html", context)
+    context = {
+
+    }
+    return render(request, "pages/login.html", context)
+
+def conectar(request):
+    if request.method=="POST":
+      username = request.POST["username"]
+      password = request.POST["password"]
+      user = authenticate(request, username = username, password = password)
+      if user is not None:
+          login(request, user)
+          usuarios = Usuario.objects.all()
+          context = {
+              "usuarios":usuarios
+          }
+          return render(request, "pages/crud.html", context)
+
+    else:
+        context = {
+        "mensaje":"Credenciales incorrectos",
+        "design":"alert alert-danger w-50 mx-auto text-center",
+        }
+        return render(request, "pages/login.html",context)
+
+def desconectar(request):
+    del request.session["user"]
+    context = {
+        "design":"alert alert-success w-50 mx-auto text-center",
+        "mensaje":"Desconectado con exito",
+    }
+    return render(request, "pages/login.html", context)

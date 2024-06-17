@@ -67,6 +67,9 @@ TEMPLATES = [
         },
     },
 ]
+LOGIN_URL = "login"
+LOGIN_REDIRECT_URL = "crud"
+LOGOUT_REDIRECT_URL = "logout"
 
 WSGI_APPLICATION = 'retro.wsgi.application'
 
