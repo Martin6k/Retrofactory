@@ -36,14 +36,9 @@ def crearsesion2(request):
 
 def crud(request):
     usuarios = Usuario.objects.all()
-    context = {
-        "usuarios":usuarios
-    }
-    return render(request, 'pages/crud.html',context)
-
-def crud_genero(request):
     generos = Genero.objects.all()
     context = {
-        "generos": generos,
+        "usuarios":usuarios,
+        "generos":generos
     }
-    return render(request,'pages/crud_genero.html',context)
+    return render(request, 'pages/crud.html',context)

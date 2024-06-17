@@ -10,15 +10,29 @@ class Genero(models.Model):
     
 class Usuario(models.Model):
     rut = models.CharField(primary_key=True,max_length=10)
-    nombre = models.CharField(max_length=20)
-    apellido_paterno = models.CharField(max_length=20)
-    apellido_materno = models.CharField(max_length=20)
+    nombre = models.CharField(max_length=30)
+    apellidos = models.CharField(max_length=50)
     fecha_nacimiento = models.DateField(blank=False,null=False)
     id_genero = models.ForeignKey('Genero',on_delete=models.CASCADE,db_column='idGenero')
     telefono = models.CharField(max_length=12)
     email = models.EmailField(unique=True, max_length=100, blank=True, null=True)
-    direccion = models.CharField(max_length=50, blank=True, null=True)
-    activo = models.BooleanField()
 
     def __str__(self):
-        return (str(self.nombre)+" "+str(self.apellido_paterno)+" "+str(self.apellido_materno))
+        return (str(self.nombre)+" "+str(self.apellidos))
+    
+class Categoria(models.Model):
+    id_categoria = models.AutoField(db_column='idCategoria', primary_key=True)
+    categoria = models.CharField(max_length=10,blank=True, null=False)
+
+    def __str__(self):
+        return str(self.categoria)
+
+class Producto(models.Model):
+    id_producto = models.AutoField(db_column='idProducto', primary_key=True)
+    id_categoria = models.ForeignKey('Categoria',on_delete=models.CASCADE, db_column='idCategoria')
+    descripcion = models.CharField(max_length=30)
+    precio = models.IntegerField()
+    stock = models.IntegerField()
+
+    def __str__(self):
+        return str(self.descripcion)
