@@ -15,9 +15,10 @@ class Usuario(models.Model):
     id_genero = models.ForeignKey('Genero',on_delete=models.CASCADE,db_column='idGenero')
     telefono = models.CharField(max_length=12)
     email = models.EmailField(unique=True, max_length=100, blank=True, null=True)
+    contraseña = models.CharField(max_length=15, null=False, blank=False,default='null')
 
     def __str__(self):
-        return (str(self.nombre)+" "+str(self.apellidos))
+        return (str(self.nombre))
     
 class Categoria(models.Model):
     id_categoria = models.AutoField(db_column='idCategoria', primary_key=True)

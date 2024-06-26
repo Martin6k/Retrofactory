@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Genero, Usuario
+from .models import Genero, Usuario, Producto, Categoria
 
 # Create your views here.
 def index(request):
@@ -31,14 +31,6 @@ def crearsesion(request):
     return render(request,'pages/crearsesion.html',context)
 
 def crearsesion2(request):
-    context={}
-    return render(request,'pages/crearsesion2.html',context)
-
-def crud(request):
-    usuarios = Usuario.objects.all()
-    generos = Genero.objects.all()
-    context = {
-        "usuarios":usuarios,
-        "generos":generos
+    context={
     }
-    return render(request, 'pages/crud.html',context)
+    return render(request,'pages/crearsesion2.html',context)
