@@ -10,8 +10,7 @@ class Genero(models.Model):
     
 class Usuario(models.Model):
     rut = models.CharField(primary_key=True,max_length=10)
-    nombre = models.CharField(max_length=30)
-    apellidos = models.CharField(max_length=50)
+    nombre = models.CharField(max_length=80)
     fecha_nacimiento = models.DateField(blank=False,null=False)
     id_genero = models.ForeignKey('Genero',on_delete=models.CASCADE,db_column='idGenero')
     telefono = models.CharField(max_length=12)
