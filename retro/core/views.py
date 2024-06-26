@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from .models import Genero, Usuario
 from .forms import GeneroForm
-
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
-    usuarios = Usuario.objects.all()
-    context={}
+    context={
+        "user": "",
+    }
     return render(request,'pages/index.html', context)
 
 def juegos(request):
@@ -33,12 +35,13 @@ def crearsesion(request):
     context={}
     return render(request,'pages/crearsesion.html',context)
 
+@login_required
 def crud(request):
     usuarios = Usuario.objects.all()
-    context={
-        "usuarios":usuarios
+    context = {
+        "usuarios":usuarios,
     }
-    return render(request,"pages/crud.html",context)
+    return render(request, "pages/crud.html", context)
 
 def user_add(request):
     if request.method != "POST":
@@ -256,10 +259,11 @@ def loginSession(request):
                 "design":"alert alert-danger w-50 mx-auto text-center",
             }
             return render(request, "pages/login.html", context)
-    context = {
-
-    }
-    return render(request, "pages/login.html", context)
+    else:
+        context = {
+        }
+        return render(request, "pages/login.html", context)
+    
 
 def conectar(request):
     if request.method=="POST":
@@ -273,7 +277,6 @@ def conectar(request):
               "usuarios":usuarios
           }
           return render(request, "pages/crud.html", context)
-
     else:
         context = {
         "mensaje":"Credenciales incorrectos",
@@ -282,7 +285,8 @@ def conectar(request):
         return render(request, "pages/login.html",context)
 
 def desconectar(request):
-    del request.session["user"]
+    #del request.session["user"]
+    logout(request)
     context = {
         "design":"alert alert-success w-50 mx-auto text-center",
         "mensaje":"Desconectado con exito",

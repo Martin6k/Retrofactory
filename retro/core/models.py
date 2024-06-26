@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 # py manage.py makemigrations // por cada cambio que se le haga a la base de datos
 # py manage.py migrate
 # Create your models here.
@@ -24,3 +25,5 @@ class Usuario(models.Model):
 
     def __str__(self):
         return (str(self.nombre)+" "+str(self.apellido_paterno)+" "+str(self.apellido_materno))
+    
+   # class User(AbstractUser):
