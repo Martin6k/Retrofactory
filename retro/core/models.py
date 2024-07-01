@@ -9,12 +9,11 @@ class Genero(models.Model):
         return str(self.genero)
     
 class Usuario(models.Model):
-    rut = models.CharField(primary_key=True,max_length=10)
+    email = models.EmailField(primary_key=True, unique=True, max_length=100, blank=True, null=True)
     nombre = models.CharField(max_length=80)
     fecha_nacimiento = models.DateField(blank=False,null=False)
     id_genero = models.ForeignKey('Genero',on_delete=models.CASCADE,db_column='idGenero')
     telefono = models.CharField(max_length=12)
-    email = models.EmailField(unique=True, max_length=100, blank=True, null=True)
     contraseña = models.CharField(max_length=15, null=False, blank=False,default='null')
 
     def __str__(self):
