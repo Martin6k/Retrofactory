@@ -74,7 +74,7 @@ def user_add(request):
         }
         return render(request, "pages/user_add.html", context)
 
-def user_def(request, pk):
+def user_del(request, pk):
     try:
         usuario = Usuario.objects.get(email=pk)
         usuario.delete()
@@ -90,3 +90,135 @@ def user_def(request, pk):
             "mensaje": "Error, correo no encontrado...",
             "usuarios": usuarios,
         }
+        return render(request, "pages/crud.html", context)
+
+def user_findEdit (request,pk):
+    if pk != "":
+        usuario = Usuario.objects.get(email=pk)
+        generos = Genero.objects.all()
+        context = {
+            "generos":generos,
+            "usuario":usuario,
+        }
+        return render(request, "pages/user_update.html", context)
+    else:
+        usuarios = Usuario.ojbects.all()
+        context = {
+            "mensaje":"Error, email no encontrado",
+            "usuarios":usuario
+        }
+        return render(request, "pages/crud.html", context)
+
+def user_update(request):
+    if request.method=="POST":
+
+        correo = request.POST["correo"]
+        nombre = request.POST["nombre"]
+        fechaNac = request.POST["fecha"]
+        genero = request.POST["genero"]
+        telefono = request.POST["telefono"]
+        password = request.POST["password"]
+        activo = True     
+
+        objGenero = Genero.objects.get(id_genero = genero)
+
+        obj = Usuario(
+
+            email =  correo,
+            nombre = nombre,
+            fecha_nacimiento = fechaNac,
+            id_genero = objGenero,
+            telefono = telefono,
+            contraseña = password,
+            activo = activo,
+
+        )
+        obj.save()
+
+        generos = Genero.objects.all()
+        context = {
+            "mensaje": "Modificado con exito",
+            "generos":generos,
+            "usuario":obj,
+        }
+        return render(request, "pages/user_update.html", context)
+
+def crud_genero(request):
+    generos = Genero.objects.all()
+    context = {
+        "generos": generos,
+    }
+    return render(request, "pages/crud_genero.html", context)
+
+def genero_add(request):
+    formGenero = GeneroForm()
+    if request.method == "POST":
+        nuevo = GeneroForm(request.POST)
+        if nuevo.is_valid():
+            nuevo.save()
+
+            context = {
+                "mensaje": "Agregado con exito",
+                "form":formGenero,
+            }
+            return render(request, "pages/genero_add.html", context)
+        
+    else:
+        context = {
+            "form":formGenero,
+        }
+        return render(request, "pages/genero:_add.html", context)
+
+def genero_del(request, pk):
+    try:
+        genero = Genero.objects.get(id_genero = pk)
+        genero.delete()
+
+        generos = Genero.objects.all()
+        context = {
+            "mensaje":"Eliminado con exito",
+            "generos":generos
+        }
+        return render(request, "pages/crud_genero.html", context)
+    
+    except: 
+        generos = Genero.objects.all()
+        context = {
+            "mensaje":"Error, Genero no encontrado",
+            "generos":generos
+        }
+        return render(request, "pages/crud_genero.html", context)
+
+def genero_edit(request, pk):
+    if pk!="":
+        genero = Genero.objects.get(id_genero = pk)
+
+        if request.method == "POST":
+            nuevo = GeneroForm(request.POST,instance = genero)
+            if nuevo.is_valid():
+                nuevo.save()
+
+                context = {
+                    "mensaje":"Modificacion exitosa",
+                    "form":nuevo
+                }
+                return render(request, "pages/genero_edit.html", context)
+        else:
+          form = GeneroForm(instance = genero)
+
+          context = {
+              "form":form,
+          }
+          return render(request, "pages/genero_edit.html", context)
+    else: 
+        generos = Genero.objects.all()
+        context = {
+            "mensaje":"Error, genero no encontrado...",
+            "generos":generos,
+        }
+        return render(request, "pages/crud_genero.html", context)
+    
+
+
+
+        
