@@ -36,7 +36,7 @@ def crearsesion2(request):
     return render(request,'pages/crearsesion2.html',context)
 
 def crud(request):
-    usuarios = Usuario.object.all()
+    usuarios = Usuario.objects.all()
     context = {
         "usuarios":usuarios,
     }

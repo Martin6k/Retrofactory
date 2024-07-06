@@ -9,7 +9,7 @@ class Genero(models.Model):
         return str(self.genero)
     
 class Usuario(models.Model):
-    email = models.EmailField(primary_key=True, unique=True, max_length=100, blank=True, null=True)
+    email = models.EmailField(primary_key=True, unique=True, max_length=100, blank=True, null=False)
     nombre = models.CharField(max_length=80)
     fecha_nacimiento = models.DateField(blank=False,null=False)
     id_genero = models.ForeignKey('Genero',on_delete=models.CASCADE,db_column='idGenero')
