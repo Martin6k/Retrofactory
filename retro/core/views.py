@@ -102,7 +102,8 @@ def user_findEdit (request,pk):
         }
         return render(request, "pages/user_update.html", context)
     else:
-        usuarios = Usuario.ojbects.all()
+        #decia ojbects
+        usuarios = Usuario.objects.all()
         context = {
             "mensaje":"Error, email no encontrado",
             "usuarios":usuario
