@@ -125,7 +125,11 @@ def user_update(request):
 
         obj = Usuario(
 
+<<<<<<< HEAD
             email = correo,
+=======
+            email =  correo,
+>>>>>>> Branch-de-prueba_merge
             nombre = nombre,
             fecha_nacimiento = fechaNac,
             id_genero = objGenero,

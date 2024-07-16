@@ -8,7 +8,10 @@ class Genero(models.Model):
     def __str__(self):
         return str(self.genero)
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> Branch-de-prueba_merge
 class Usuario(models.Model):
     email = models.EmailField(primary_key=True, unique=True, max_length=100, blank=True)
     nombre = models.CharField(max_length=80)
