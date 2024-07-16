@@ -1,15 +1,8 @@
 from django.shortcuts import render
-<<<<<<< Updated upstream
-from .models import Genero, Usuario
-
-# Create your views here.
-=======
 from .models import Genero, Usuario, Producto, Categoria
 from .forms import GeneroForm, UsuarioForm
 
 # Create your views here.
-#cambio
->>>>>>> Stashed changes
 def index(request):
     context={}
     return render(request,'pages/index.html', context)
@@ -39,24 +32,12 @@ def crearsesion(request):
     return render(request,'pages/crearsesion.html',context)
 
 def crearsesion2(request):
-<<<<<<< Updated upstream
-    context={}
-=======
     context={
     }
->>>>>>> Stashed changes
     return render(request,'pages/crearsesion2.html',context)
 
 def crud(request):
     usuarios = Usuario.objects.all()
-<<<<<<< Updated upstream
-    generos = Genero.objects.all()
-    context = {
-        "usuarios":usuarios,
-        "generos":generos
-    }
-    return render(request, 'pages/crud.html',context)
-=======
     context = {
         "usuarios":usuarios,
     }
@@ -145,11 +126,7 @@ def user_update(request):
 
         obj = Usuario(
 
-<<<<<<< HEAD
-            email = correo,
-=======
             email =  correo,
->>>>>>> Branch-de-prueba_merge
             nombre = nombre,
             fecha_nacimiento = fechaNac,
             id_genero = objGenero,
@@ -247,4 +224,3 @@ def genero_edit(request, pk):
 
 
         
->>>>>>> Stashed changes
