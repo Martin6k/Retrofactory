@@ -9,9 +9,12 @@ class Genero(models.Model):
         return str(self.genero)
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> Branch-de-prueba_merge
+=======
+>>>>>>> 16e509795190f8a3d2d4dfcdde155ecfc50f845b
 class Usuario(models.Model):
     email = models.EmailField(primary_key=True, unique=True, max_length=100, blank=True)
     nombre = models.CharField(max_length=80)

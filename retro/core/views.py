@@ -2,7 +2,10 @@ from django.shortcuts import render
 from .models import Genero, Usuario, Producto, Categoria
 
 # Create your views here.
+<<<<<<< HEAD
 #cambio
+=======
+>>>>>>> 16e509795190f8a3d2d4dfcdde155ecfc50f845b
 def index(request):
     context={}
     return render(request,'pages/index.html', context)
@@ -127,10 +130,14 @@ def user_update(request):
         obj = Usuario(
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             email = correo,
 =======
             email =  correo,
 >>>>>>> Branch-de-prueba_merge
+=======
+            email =  correo,
+>>>>>>> 16e509795190f8a3d2d4dfcdde155ecfc50f845b
             nombre = nombre,
             fecha_nacimiento = fechaNac,
             id_genero = objGenero,
