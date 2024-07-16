@@ -8,6 +8,7 @@ class Genero(models.Model):
     def __str__(self):
         return str(self.genero)
     
+<<<<<<< Updated upstream
 class Usuario(models.Model):
     rut = models.CharField(primary_key=True,max_length=10)
     nombre = models.CharField(max_length=30)
@@ -19,6 +20,23 @@ class Usuario(models.Model):
 
     def __str__(self):
         return (str(self.nombre)+" "+str(self.apellidos))
+=======
+<<<<<<< HEAD
+    
+=======
+>>>>>>> Branch-de-prueba_merge
+class Usuario(models.Model):
+    email = models.EmailField(primary_key=True, unique=True, max_length=100, blank=True)
+    nombre = models.CharField(max_length=80)
+    fecha_nacimiento = models.DateField(blank=False,null=False)
+    id_genero = models.ForeignKey('Genero',on_delete=models.CASCADE,db_column='idGenero')
+    telefono = models.CharField(max_length=12)
+    contraseña = models.CharField(max_length=15, null=False, blank=False,default='null')
+    activo = models.BooleanField()
+
+    def __str__(self):
+        return (str(self.nombre))
+>>>>>>> Stashed changes
     
 class Categoria(models.Model):
     id_categoria = models.AutoField(db_column='idCategoria', primary_key=True)
