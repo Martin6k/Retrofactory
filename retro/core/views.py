@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Genero, Usuario, Producto, Categoria
+from .forms import GeneroForm, UsuarioForm
 
 # Create your views here.
 def index(request):
@@ -168,7 +169,7 @@ def genero_add(request):
         context = {
             "form":formGenero,
         }
-        return render(request, "pages/genero:_add.html", context)
+        return render(request, "pages/genero_add.html", context)
 
 def genero_del(request, pk):
     try:
