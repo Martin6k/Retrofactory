@@ -22,5 +22,10 @@ urlpatterns = [
     path("genero_add", views.genero_add, name = "genero_add"),
     path("genero_del/<str:pk>", views.genero_del, name = "genero_del"),
     path("genero_edit/<str:pk>", views.genero_edit, name = "genero_edit"),
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+    path("login", views.conectar, name = "login"),
+    path("logout", views.desconectar, name = "logout"),
 >>>>>>> Stashed changes
 ]

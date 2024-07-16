@@ -5,6 +5,7 @@ from .models import Genero, Usuario
 # Create your views here.
 =======
 from .models import Genero, Usuario, Producto, Categoria
+from .forms import GeneroForm, UsuarioForm
 
 # Create your views here.
 #cambio
@@ -191,7 +192,7 @@ def genero_add(request):
         context = {
             "form":formGenero,
         }
-        return render(request, "pages/genero:_add.html", context)
+        return render(request, "pages/genero_add.html", context)
 
 def genero_del(request, pk):
     try:
