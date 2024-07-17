@@ -110,11 +110,29 @@ def user_findEdit (request,pk):
             "usuarios":usuario
         }
         return render(request, "pages/crud.html", context)
+#def user_findEdit(request, pk):
+    try:
+        # Verifica si el correo proporcionado existe en la base de datos
+        usuario = Usuario.objects.get(email=pk)
+        generos = Genero.objects.all()
+        context = {
+            "generos": generos,
+            "usuario": usuario,
+        }
+        return render(request, "pages/user_update.html", context)
+    except Usuario.DoesNotExist:
+        # Maneja el caso cuando no se encuentra el correo
+        usuarios = Usuario.objects.all()
+        context = {
+            "mensaje": "Error, correo no encontrado",
+            "usuarios": usuarios,
+        }
+        return render(request, "pages/crud.html", context)
 
 def user_update(request):
     if request.method=="POST":
 
-        correo = request.POST["correo"]
+        correo = request.POST["email"]
         nombre = request.POST["nombre"]
         fechaNac = request.POST["fecha"]
         genero = request.POST["genero"]
