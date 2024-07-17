@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    {% load static}
+    {% load static%}
     <link rel="stylesheet" href="{% static 'css/style.css'}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -17,11 +17,11 @@
                 <div class="col-md-8 shadow-lg mx-auto text-center p-3" style="background-color: rgb(255, 248, 227);">
                     <h2 class="my-3">Formulario de modificacion</h2>
                     <form action="{% url 'user_update' %}" method="POST" class="form-floating">
-                        {% csrf_token %}
                         <div class="form-floating mb-3 w-50 mx-auto">
                             <input type="email" value="{{usuario.email}}" class="form-control" id="email" name="email" readonly>
                             <label for="email">Correo</label>
                         </div>
+                        {% csrf_token %}
                         <div class="form-floating mb-3 w-50 mx-auto">
                             <input type="text" value="{{usuario.nombre}}" class="form-control" id="nombre" name="nombre">
                             <label for="nombre">Nombre</label>
@@ -31,7 +31,7 @@
                             <label for="fecha">Fecha Nacimiento</label>
                         </div>
                         <div class="form-floating mb-3 w-50 mx-auto">
-                            <input class="form-select" id="genero" name="genero">
+                            <input class="form-select" values="{{usuario.id_genero.genero}}" id="genero" name="genero">
                             {% for tmp in generos %}
                             {% if tmp.genero  == usuario.id_genero.genero%}
                             {% else %}
@@ -53,7 +53,7 @@
                         </div>
                         <div>
                             <button type="submit" class="btn btn-primary">modificar</button>
-                            <a href=""><button>Volver</button></a>
+                            <button type="button"><a href="{% url 'crud'%}">Volver</a></button>
                         </div>
                     </form>
                 </div>

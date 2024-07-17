@@ -11,4 +11,4 @@ class GeneroForm(ModelForm):
 class UsuarioForm(ModelForm):
     class Meta:
         model = Usuario
-        fields = "__all__"
+        fields = ["nombre", "fecha_nacimiento", "id_genero", "telefono"]

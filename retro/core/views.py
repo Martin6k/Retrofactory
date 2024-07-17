@@ -104,15 +104,17 @@ def user_findEdit (request,pk):
         return render(request, "pages/user_update.html", context)
     else:
         #decia ojbects
-        usuarios = Usuario.objects.all()
+        usuario = Usuario.objects.all()
         context = {
             "mensaje":"Error, email no encontrado",
             "usuarios":usuario
         }
         return render(request, "pages/crud.html", context)
 
-def user_update(request):
+def user_update(request, pk):
+    usuario=Usuario.objects.get(email=pk)
     if request.method=="POST":
+        form = UsuarioForm(request.POST, instance=usuario)
 
         correo = request.POST["correo"]
         nombre = request.POST["nombre"]
