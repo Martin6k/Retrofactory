@@ -31,13 +31,14 @@
                             <label for="fecha">Fecha Nacimiento</label>
                         </div>
                         <div class="form-floating mb-3 w-50 mx-auto">
-                            <input class="form-select" id="genero" name="genero">
-                            {% for tmp in generos %}
-                            {% if tmp.genero  == usuario.id_genero.genero%}
-                            {% else %}
-                            <option value="{{tmp.id_genero}}">{{tmp.genero}}</option>
-                            {% endif %}
-                            {% endfor %}
+                            
+                            <select class="form-select" id="genero" name="genero">
+                                {% for tmp in generos %}
+                                    <option value="{{tmp.id_genero}}" {% if tmp.genero == usuario.id_genero.genero %}selected{% endif %}>
+                                        {{tmp.genero}}
+                                    </option>
+                                {% endfor %}
+                            </select>
                             <label for="genero">Genero</label>
                         </div>
                         <div class="form-floating mb-3 w-50 mx-auto">
